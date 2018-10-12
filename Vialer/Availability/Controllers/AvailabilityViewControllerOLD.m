@@ -3,8 +3,7 @@
 //  Copyright (c) 2015 VoIPGRID. All rights reserved.
 //
 
-#import "AvailabilityViewController.h"
-
+#import "AvailabilityViewControllerOLD.h"
 #import "AvailabilityModel.h"
 #import "Configuration.h"
 #import "SVProgressHUD.h"
@@ -25,7 +24,7 @@ static NSString * const AvailabilityViewControllerAddFixedDestinationPageURLWith
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString: NSLocalizedString(@"Loading availability options...", nil)];
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString: NSLocalizedString(@"Loading availability options...", nil)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
