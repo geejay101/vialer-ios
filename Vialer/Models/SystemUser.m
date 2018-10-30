@@ -314,7 +314,6 @@ static NSString * const SystemUserCurrentAvailabilitySUDKey = @"AvailabilityMode
     return [defaults boolForKey:SystemUserSUDShowWiFiNotification];
 }
 
-
 - (void)setMobileNumber:(NSString *)mobileNumber {
     _mobileNumber = mobileNumber;
     if (mobileNumber) {

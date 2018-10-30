@@ -28,8 +28,6 @@
 #import "VialerLogger.h"
 #import <VialerSIPLib/VialerSIPLib.h>
 #import "VoIPGRIDRequestOperationManager.h"
-//orp
-#import "AvailabilityModel.h"
 #import "VialerWebViewController.h"
-//pro
+#import "SideMenuViewController.h"
 
