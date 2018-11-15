@@ -170,13 +170,21 @@
         return YES;
     }]]);
     
+    // Mocking the currentUser singleton and sipAccount property
+    NSString *mockSIPAccount = @"012334456";
+    id mockSystemUser = OCMClassMock([SystemUser class]);
+    OCMStub([mockSystemUser sipAccount]).andReturn(mockSIPAccount);
+    OCMStub([mockSystemUser currentUser]).andReturn(mockSystemUser);
+    
     // When
     [self.middleware handleReceivedAPSNPayload:mockDictionary];
     
     // Then
     OCMVerifyAll(mockMiddlewareRequestOperationManager);
     
+    // Cleanup
     [mockMiddlewareRequestOperationManager stopMocking];
+    [mockSystemUser stopMocking];
 }
 
 @end
